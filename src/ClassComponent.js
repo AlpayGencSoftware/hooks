@@ -9,8 +9,10 @@ export default class ClassComponent extends Component {
     componentDidMount(){
        console.log('Component Did Mount is working.');
     } 
-    componentDidUpdate(){
-        console.log("componentDidupdate calıştı.");
+    componentDidUpdate(prevProps, preState){
+       if (preState.counter !== this.state.counter) {
+          console.log("ComponentDidUpdate çalistı");
+       }
     }
     increase(){
        this.setState({counter: this.state.counter + 1});
