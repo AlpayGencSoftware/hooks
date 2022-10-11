@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./styles.css";
 import UserList from "./UserList";
+import Usereducerhook from "./UseReducer/Usereducerhook";
 import { UserContext } from "./contexts/UserContext";
 
 
@@ -38,7 +39,9 @@ function App() {
       </header> */}
       <header>
         <h1>Welcome</h1>
-        <UserList />
+        {/* <UserList /> */}
+
+        <Usereducerhook/>
       </header>
     </div>
     </UserContext.Provider>
